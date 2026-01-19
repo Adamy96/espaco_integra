@@ -1,0 +1,286 @@
+.footer {
+  background: #fafafa;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Column blocks mimic: space-y-4 */
+.clinic,
+.links,
+.contact,
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Clinic header mimic: flex items-center gap-2 */
+.clinicHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heartIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--secondary, #f472b6);
+  fill: rgba(251, 207, 232, 0.9);
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #2563eb; /* primary-600 */
+}
+
+.clinicText {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+/* Titles mimic: text-lg font-semibold + border-b-2 border-accent inline-block pb-1 */
+.title {
+  display: inline-block;
+  width: fit-content;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #84b2b0; /* accent */
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Quick links list mimic: space-y-2 */
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 200ms ease, transform 200ms ease;
+
+  &:hover {
+    color: #2563eb; /* primary-600 */
+    transform: translateX(4px);
+  }
+}
+
+.bullet {
+  color: var(--secondary, #f472b6);
+}
+
+/* Contact list mimic: space-y-3 */
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Contact row mimic: flex items-start gap-2 text-sm group */
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Icon pill mimic: p-1 rounded bg-*-50 group-hover:bg-*-100 */
+.iconPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 200ms ease;
+  margin-top: 2px;
+}
+
+.pillIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.iconPillSecondary {
+  background: rgba(252, 231, 243, 0.9);
+
+  .pillIcon {
+    color: #db2777;
+  }
+}
+
+.iconPillPrimary {
+  background: rgba(219, 234, 254, 0.9);
+
+  .pillIcon {
+    color: #3b82f6;
+  }
+}
+
+.iconPillTertiary {
+  background: rgba(224, 242, 254, 0.9);
+
+  .pillIcon {
+    color: #06b6d4;
+  }
+}
+
+.contactRow:hover .iconPillSecondary {
+  background: #fce7f3;
+}
+.contactRow:hover .iconPillPrimary {
+  background: #dbeafe;
+}
+.contactRow:hover .iconPillTertiary {
+  background: #cffafe;
+}
+
+.contactValue {
+  margin-top: 2px; /* mt-0.5 */
+  line-height: 1.6;
+}
+
+/* Hours card mimic: text-sm text-gray-600 bg-white p-3 rounded-lg border shadow-sm */
+.hoursCard {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  box-shadow: 0 10px 18px rgba(17, 24, 39, 0.06);
+}
+
+.hoursTitle {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #2563eb; /* primary-600 */
+  font-size: 0.875rem;
+}
+
+.hoursBody {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Social row mimic: flex gap-3 pt-2 */
+.socialRow {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms ease;
+  text-decoration: none;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 200ms ease;
+}
+
+.socialBtn:hover .socialIcon {
+  transform: scale(1.1);
+}
+
+.socialBtnPrimary {
+  background: rgba(239, 246, 255, 1);
+
+  .socialIcon {
+    color: #2563eb; /* primary-600 */
+  }
+
+  &:hover {
+    background: #dbeafe;
+  }
+}
+
+.socialBtnSecondary {
+  background: rgba(253, 242, 248, 1);
+
+  .socialIcon {
+    color: #db2777;
+  }
+
+  &:hover {
+    background: #fce7f3;
+  }
+}
+
+.socialBtnTertiary {
+  background: rgba(236, 254, 255, 1);
+
+  .socialIcon {
+    color: #0e7490;
+  }
+
+  &:hover {
+    background: #cffafe;
+  }
+}
+
+/* Bottom bar mimic: border-t mt-12 pt-6 text-center */
+.bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(191, 219, 254, 0.6);
+  text-align: center;
+}
+
+.copy {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ---------------------------
+   MEDIA QUERIES (AGRUPADAS)
+---------------------------- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}

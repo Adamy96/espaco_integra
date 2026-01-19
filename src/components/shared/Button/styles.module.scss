@@ -1,0 +1,111 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+
+  border: 0;
+
+  box-shadow:
+    0 4px 10px rgba(75, 46, 57, 0.12),
+    0 1px 3px rgba(75, 46, 57, 0.08);
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+
+  /* focus ring */
+  outline: none;
+
+  // &:focus-visible {
+  //   box-shadow:
+  //     0 4px 10px rgba(75, 46, 57, 0.12),
+  //     0 1px 3px rgba(75, 46, 57, 0.08);
+  // }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+/* variants */
+.variantDefault {
+  // background: var(--primary, #7c3aed);
+  // color: var(--primary-foreground, #ffffff);
+
+  // &:hover {
+  //   background: color-mix(in srgb, var(--primary, #7c3aed) 90%, #000);
+  // }
+}
+
+.variantDestructive {
+  // background: var(--destructive, #ef4444);
+  // color: var(--destructive-foreground, #ffffff);
+
+  // &:hover {
+  //   background: color-mix(in srgb, var(--destructive, #ef4444) 90%, #000);
+  // }
+}
+
+.variantOutline {
+  // border: 1px solid var(--input, rgba(17, 24, 39, 0.18));
+  // background: var(--background, #ffffff);
+  // color: var(--foreground, #111827);
+
+  // &:hover {
+  //   background: var(--accent, rgba(124, 58, 237, 0.08));
+  //   color: var(--accent-foreground, #111827);
+  // }
+}
+
+.variantSecondary {
+  // background: var(--secondary, rgba(17, 24, 39, 0.06));
+  // color: var(--secondary-foreground, #111827);
+
+  // &:hover {
+  //   background: color-mix(
+  //     in srgb,
+  //     var(--secondary, rgba(17, 24, 39, 0.06)) 80%,
+  //     #000
+  //   );
+  // }
+}
+
+.variantGhost {
+  // background: transparent;
+  // color: var(--foreground, #111827);
+
+  // &:hover {
+  //   background: var(--accent, rgba(124, 58, 237, 0.08));
+  //   color: var(--accent-foreground, #111827);
+  // }
+}
+
+.variantLink {
+  // background: transparent;
+  // color: var(--primary, #7c3aed);
+  // text-decoration: none;
+  // text-underline-offset: 4px;
+
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+}
+
+/* sizes */
+
+/* ---------------------------
+   MEDIA QUERIES (AGRUPADAS)
+---------------------------- */
+@media (min-width: 768px) {
+  .root {
+    border-radius: 10px;
+  }
+}
